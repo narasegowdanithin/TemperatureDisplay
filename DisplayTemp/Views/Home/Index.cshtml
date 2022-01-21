@@ -1,0 +1,14 @@
+﻿@model IEnumerable<DisplayTemp.Models.TempDetailsModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Paderborn City temprature Display for every 20 seconds intervals which is fetched from stored data</p>
+    <h3>temprature and timestamp</h3>
+    @foreach(var i in Model)
+            {
+<p>@i.temp °C  at  @i.timeStamp Hour</p>
+            }
+</div>
